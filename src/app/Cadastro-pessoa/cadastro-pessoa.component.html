@@ -16,7 +16,7 @@
     <form [formGroup]="secondFormGroup">
       <ng-template matStepLabel>Preencha seu endereço</ng-template>
       <mat-form-field appearance="fill">
-        <mat-label>Name</mat-label>
+        <mat-label>Endereço</mat-label>
         <input matInput placeholder="Ex. Av. Itaborai nº391" formControlName="secondCtrl" required>
       </mat-form-field>
       <div>
@@ -24,19 +24,21 @@
       </div>
     </form>
   </mat-step>
-  <mat-step [stepControl]="thirdFormGroup" label="telefone">
+
+  <mat-step [stepControl]="thirdFormGroup">
     <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Preencha seu contato</ng-template>
       <mat-form-field appearance="fill">
-        <mat-label>Telefone</mat-label>
-        <input matInput formControlName="thirdCtrl" placeholder="Digite nº de contato"
-               required>
+        <mat-label>telefone</mat-label>
+        <input matInput placeholder="7867867" formControlName="thirdCtrl" required>
       </mat-form-field>
       <div>
-        <button mat-button matStepperPrevious>Voltar</button>
         <button mat-button matStepperNext>Próximo</button>
       </div>
     </form>
   </mat-step>
+
+
   <mat-step>
     <ng-template matStepLabel>Finalizar</ng-template>
     <p>You are now done.</p>

@@ -18,7 +18,7 @@ export class CadastroPessoaComponent implements OnInit {
     secondCtrl: ['', Validators.required],
   });
   thirdFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
+    thirdCtrl: ['', Validators.required],
   });
   isLinear = false;
 
